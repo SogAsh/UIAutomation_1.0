@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\Sogdian\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Sogdian\\.nuget\\packages"
+    ]
+  }
+}
