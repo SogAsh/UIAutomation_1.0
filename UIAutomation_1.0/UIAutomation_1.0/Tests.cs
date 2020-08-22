@@ -7,75 +7,40 @@ using NUnit.Framework;
 
 namespace UIAutomation_1._0
 {
-    public class Tests
+    [TestFixture]
+    public class Tests : PageObject
     {
         [Test]
-        public static void CheckCountResults()
+        public void WhenIsCount_True()
         {
-            int time = 2000;
-
-            IWebDriver driver = new ChromeDriver();
-            WebDriverWait wait;
-            wait = new WebDriverWait(driver, TimeSpan.FromMilliseconds(10000));
-
-            driver.Navigate().GoToUrl("https://github.com/");
-            //Thread.Sleep(time);
-
-            driver.Manage().Window.Maximize();
-            //Thread.Sleep(time);
-
-            //Input data
-            driver.FindElement(By.XPath("//input[@type = 'text']")).SendKeys("RestSharp");
+            driver.FindElement(PageObject.enterpriseTab).Click();
+            Thread.Sleep(time);
+            /*
+            driver.FindElement(PageObject.pricingTab).Click();
             Thread.Sleep(time);
 
-            //Find
-            driver.FindElement(By.XPath("//span[@class = 'js-jump-to-badge-search-text-global']")).Click();
+            SelectElement pricingElement = new SelectElement(driver.FindElement(By.XPath("//summary[contains(text(),'Pricing')]")));
+            pricingElement.SelectByText("Compare plans");
             Thread.Sleep(time);
+            */
 
-            //driver.FindElement(By.LinkText("/restsharp/RestSharp")).Click();
-            //Thread.Sleep(time);
-
-
-
+            driver.FindElement(PageObject.mainIcon).Click();
+            Thread.Sleep(time);
+            driver.FindElement(PageObject.insertValue).SendKeys("RestSharp");
+            Thread.Sleep(time);
+            driver.FindElement(PageObject.searchClick).Click();
+            Thread.Sleep(time);
+            //IJavaScriptExecutor scroll = (IJavaScriptExecutor)driver;
+            //scroll.ExecuteScript("window.scrollby(0,300)");
 
             //Count of results
-            IWebElement countElement = driver.FindElement(By.XPath("//div/div[3]/div/div[1]/h3"));
+            IWebElement countElement = driver.FindElement(PageObject.countRepozitory);
 
             var actualCount = countElement.Text;
-            var expectedCount = Data.countResults;
+            var expectedCount = PageObject.countResults;
             Assert.AreEqual(expectedCount, actualCount, "Expected count of job is not equal the actual count");
 
-            //restsharp/RestSharp
-            driver.FindElement(By.XPath("//a[@data-hydro-click-hmac = 'a10bea7d84a95907d618942261c9876dea894d78056f037649cf0a572fc76211']")).Click();
-            Thread.Sleep(time);
-
-
-
-            driver.Quit();
-
-            //Fluent assertion
+            driver.FindElement(PageObject.restSharpLink).Click();
         }
-
-        
-        [Test]
-        public static void OpenIncognito()
-        {
-            int time = 2000;
-
-            ChromeOptions chromeOptions = new ChromeOptions();
-            chromeOptions.AddArgument("--incognito");
-
-            IWebDriver driver = new ChromeDriver(chromeOptions);
-            WebDriverWait wait;
-            wait = new WebDriverWait(driver, TimeSpan.FromMilliseconds(10000));
-
-            driver.Navigate().GoToUrl("https://github.com/");
-            Thread.Sleep(time);
-
-            driver.Quit();
-        }
-        
-
-
     }
 }

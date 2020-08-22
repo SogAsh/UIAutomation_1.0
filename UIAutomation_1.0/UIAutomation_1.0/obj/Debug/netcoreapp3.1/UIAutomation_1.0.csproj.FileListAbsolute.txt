@@ -85,7 +85,6 @@ E:\Работа\Workplace\UIAutomation_1.0\UIAutomation_1.0\UIAutomation_1.0\bin
 E:\Работа\Workplace\UIAutomation_1.0\UIAutomation_1.0\UIAutomation_1.0\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
 E:\Работа\Workplace\UIAutomation_1.0\UIAutomation_1.0\UIAutomation_1.0\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
 E:\Работа\Workplace\UIAutomation_1.0\UIAutomation_1.0\UIAutomation_1.0\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
-E:\Работа\Workplace\UIAutomation_1.0\UIAutomation_1.0\UIAutomation_1.0\obj\Debug\netcoreapp3.1\UIAutomation_1.0.csprojAssemblyReference.cache
 E:\Работа\Workplace\UIAutomation_1.0\UIAutomation_1.0\UIAutomation_1.0\obj\Debug\netcoreapp3.1\UIAutomation_1.0.AssemblyInfoInputs.cache
 E:\Работа\Workplace\UIAutomation_1.0\UIAutomation_1.0\UIAutomation_1.0\obj\Debug\netcoreapp3.1\UIAutomation_1.0.AssemblyInfo.cs
 E:\Работа\Workplace\UIAutomation_1.0\UIAutomation_1.0\UIAutomation_1.0\obj\Debug\netcoreapp3.1\UIAutomation_1.0.csproj.CopyComplete
@@ -98,3 +97,4 @@ E:\Работа\Workplace\UIAutomation_1.0\UIAutomation_1.0\UIAutomation_1.0\obj
 E:\Работа\Workplace\UIAutomation_1.0\UIAutomation_1.0\UIAutomation_1.0\obj\Debug\netcoreapp3.1\UIAutomation_1.0.pdb
 E:\Работа\Workplace\UIAutomation_1.0\UIAutomation_1.0\UIAutomation_1.0\bin\Debug\netcoreapp3.1\testhost.exe
 E:\Работа\Workplace\UIAutomation_1.0\UIAutomation_1.0\UIAutomation_1.0\obj\Debug\netcoreapp3.1\UIAutomation_1.0.csproj.CoreCompileInputs.cache
+E:\Работа\Workplace\UIAutomation_1.0\UIAutomation_1.0\UIAutomation_1.0\obj\Debug\netcoreapp3.1\UIAutomation_1.0.csprojAssemblyReference.cache
