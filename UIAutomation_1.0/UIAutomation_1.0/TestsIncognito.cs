@@ -13,6 +13,9 @@ namespace UIAutomation_1._1
         private int time = 2000;
         private IWebDriver driver;
 
+        public static By marketTab2 = By.XPath("//li/a[@href='/marketplace']");
+        public static By menuTypes = By.XPath("//h4[@class='text-mono mb-3 text-normal']");
+
         [OneTimeSetUp]
         public void OneTimeSetUp()
         {
