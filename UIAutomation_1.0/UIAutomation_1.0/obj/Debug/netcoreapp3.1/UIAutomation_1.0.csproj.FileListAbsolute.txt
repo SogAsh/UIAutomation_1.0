@@ -97,4 +97,3 @@ E:\Работа\Workplace\UIAutomation_1.0\UIAutomation_1.0\UIAutomation_1.0\obj
 E:\Работа\Workplace\UIAutomation_1.0\UIAutomation_1.0\UIAutomation_1.0\obj\Debug\netcoreapp3.1\UIAutomation_1.0.pdb
 E:\Работа\Workplace\UIAutomation_1.0\UIAutomation_1.0\UIAutomation_1.0\bin\Debug\netcoreapp3.1\testhost.exe
 E:\Работа\Workplace\UIAutomation_1.0\UIAutomation_1.0\UIAutomation_1.0\obj\Debug\netcoreapp3.1\UIAutomation_1.0.csproj.CoreCompileInputs.cache
-E:\Работа\Workplace\UIAutomation_1.0\UIAutomation_1.0\UIAutomation_1.0\obj\Debug\netcoreapp3.1\UIAutomation_1.0.csprojAssemblyReference.cache
