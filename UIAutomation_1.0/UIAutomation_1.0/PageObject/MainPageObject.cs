@@ -10,39 +10,40 @@ namespace UIAutomation_1._0
 {
     public class MainPageObject
     {
-        private IWebDriver driver;
+        private IWebDriver _driver;
+        protected static int time = 2000;
 
         #region Locators
-        //for WhenIsCount_True()
-        public static By enterpriseTab = By.XPath("//a[@class='HeaderMenu-link no-underline py-3 d-block d-lg-inline-block'][contains(text(),'Enterprise')]");
+        private readonly By enterpriseTab = By.XPath("//a[@class='HeaderMenu-link no-underline py-3 d-block d-lg-inline-block'][contains(text(),'Enterprise')]");
         //public static By pricingTab = By.XPath("//summary[contains(text(),'Pricing')]");
-        public static By mainIcon = By.CssSelector(".mr-4[href*='https://github.com/']");
-        public static By insertValue = By.XPath("//input[@placeholder='Search GitHub']");
-        public static By searchClick = By.XPath("//span[@class='js-jump-to-badge-search-text-global']");
+        private readonly By mainIcon = By.CssSelector(".mr-4[href*='https://github.com/']");
+        private readonly By insertValue = By.XPath("//input[@placeholder='Search GitHub']");
+        private readonly By searchClick = By.XPath("//span[@class='js-jump-to-badge-search-text-global']");
         #endregion
 
         public MainPageObject(IWebDriver driver)
         {
-            this.driver = driver;
+            _driver = driver;
         }
 
         public EnterprisePageObject GoToEnterprisePage() //переходим на страницу Enterprise
         {
-            driver.FindElement(enterpriseTab).Click();
-            return new EnterprisePageObject(driver);
+            _driver.FindElement(enterpriseTab).Click();
+            return new EnterprisePageObject(_driver);
         }
 
         public MainPageObject GoToMainPage() //переходим на главную страницу 
         {
-            driver.FindElement(mainIcon).Click();
-            return new MainPageObject(driver);
+            _driver.FindElement(mainIcon).Click();
+            return new MainPageObject(_driver);
         }
 
-        public SearchResultPageObject InsertValue_RestSharp() //вводим текст в поле Search
+        public void InsertValue_RestSharp() //вводим текст в поле Search
         {
-            driver.FindElement(insertValue).SendKeys("RestSharp");
-            driver.FindElement(searchClick).Click();
-            return new SearchResultPageObject(driver);
+            _driver.FindElement(insertValue).SendKeys("RestSharp");
+            BasicClass.WaitElement(_driver, searchClick);
+            
+            _driver.FindElement(searchClick).Click();
         }
     }
 }

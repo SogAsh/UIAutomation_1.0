@@ -8,7 +8,7 @@ namespace UIAutomation_1._0.PageObject
 {
     public class SearchResultPageObject
     {
-        private IWebDriver driver;
+        private IWebDriver _driver;
 
         public static By restSharpLink = By.LinkText("restsharp/RestSharp");
         public static By countRepozitory = By.XPath("//h3[contains(text(),' repository results')]");
@@ -16,19 +16,19 @@ namespace UIAutomation_1._0.PageObject
 
         public SearchResultPageObject(IWebDriver driver)
         {
-            this.driver = driver;
+            _driver = driver;
         }
         
         public string GetText_ResualCount()
         {
-            string actualCount = driver.FindElement(countRepozitory).Text; //достаем актальное количество результатов
+            string actualCount = _driver.FindElement(countRepozitory).Text; //достаем актальное количество результатов
             return actualCount;
         }
 
         public SearchResultPageObject GoToRestSharpLink()
         {
-            driver.FindElement(SearchResultPageObject.restSharpLink).Click(); //клик по ссылке restsharp/RestSharp
-            return new SearchResultPageObject(driver);
+            _driver.FindElement(restSharpLink).Click(); //клик по ссылке restsharp/RestSharp
+            return new SearchResultPageObject(_driver);
         }
     }
 }

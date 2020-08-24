@@ -10,10 +10,8 @@ using UIAutomation_1._0.PageObject;
 namespace UIAutomation_1._0
 {
     [TestFixture]
-    public class Tests
+    public class Tests : BasicClass
     {
-        private IWebDriver driver;
-
            /* ѕќ–≈Ўј“№
             driver.FindElement(MainPageObject.pricingTab).Click();
             Thread.Sleep(time);
@@ -26,27 +24,30 @@ namespace UIAutomation_1._0
         [Test]
         public void GetText_ContactSales_WhenItIs_AreEqual()
         {
-            var mainPage = new MainPageObject(driver); //создаем экземпл€р класса MainPageObject
-            var enterprisePage = new EnterprisePageObject (driver); //создаем экземпл€р класса EnterprisePageObject
-
+            var mainPage = new MainPageObject(_driver); //создаем экземпл€р класса MainPageObject
+            var enterprisePage = new EnterprisePageObject (_driver); //создаем экземпл€р класса EnterprisePageObject
+            
             mainPage
                 .GoToEnterprisePage(); //переходим на страницу Enterprise
+            ShouldLocate(_driver, DataBase.enterprisePage); //ожидание 
 
             string actualContactSales = enterprisePage.GetText_ContactSales(); //находим текст кнопки "Contact Sales"
             Assert.AreEqual(EnterprisePageObject.expectedContactSales, actualContactSales,  "Expected Contact Sales button is not equal the actual button");
 
             mainPage
                 .GoToMainPage(); //переходим на главную страницу
+            ShouldLocate(_driver, DataBase.targetUrl); //ожидание 
         }
 
         [Test]
         public void CheckExpectedCount_WhenItIs_AreEqual()
         {
-            var mainPage = new MainPageObject(driver); //создаем экземпл€р класса MainPageObject
-            var searchResultPage = new SearchResultPageObject(driver);
+            var mainPage = new MainPageObject(_driver); //создаем экземпл€р класса MainPageObject
+            var searchResultPage = new SearchResultPageObject(_driver);
 
             mainPage
                 .InsertValue_RestSharp(); //вводим текст в поле Search
+            ShouldLocate(_driver, DataBase.targetUrl); //ожидание 
 
             var actualCount = searchResultPage.GetText_ResualCount(); //находим текст количества результатов
             var expectedCount = SearchResultPageObject.countResults;
@@ -54,8 +55,11 @@ namespace UIAutomation_1._0
 
             searchResultPage
                 .GoToRestSharpLink();
+            Thread.Sleep(time);
+            
             mainPage
                 .GoToMainPage();
+            ShouldLocate(_driver, DataBase.targetUrl); //ожидание 
         }
     }
 }
