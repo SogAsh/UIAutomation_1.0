@@ -96,5 +96,8 @@ E:\Работа\Workplace\UIAutomation_1.0\UIAutomation_1.0\UIAutomation_1.0\bin
 E:\Работа\Workplace\UIAutomation_1.0\UIAutomation_1.0\UIAutomation_1.0\obj\Debug\netcoreapp3.1\UIAutomation_1.0.dll
 E:\Работа\Workplace\UIAutomation_1.0\UIAutomation_1.0\UIAutomation_1.0\obj\Debug\netcoreapp3.1\UIAutomation_1.0.pdb
 E:\Работа\Workplace\UIAutomation_1.0\UIAutomation_1.0\UIAutomation_1.0\bin\Debug\netcoreapp3.1\testhost.exe
+E:\Работа\Workplace\UIAutomation_1.0\UIAutomation_1.0\UIAutomation_1.0\bin\Debug\netcoreapp3.1\FluentAssertions.dll
+E:\Работа\Workplace\UIAutomation_1.0\UIAutomation_1.0\UIAutomation_1.0\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+E:\Работа\Workplace\UIAutomation_1.0\UIAutomation_1.0\UIAutomation_1.0\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+E:\Работа\Workplace\UIAutomation_1.0\UIAutomation_1.0\UIAutomation_1.0\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 E:\Работа\Workplace\UIAutomation_1.0\UIAutomation_1.0\UIAutomation_1.0\obj\Debug\netcoreapp3.1\UIAutomation_1.0.csproj.CoreCompileInputs.cache
-E:\Работа\Workplace\UIAutomation_1.0\UIAutomation_1.0\UIAutomation_1.0\obj\Debug\netcoreapp3.1\UIAutomation_1.0.csprojAssemblyReference.cache

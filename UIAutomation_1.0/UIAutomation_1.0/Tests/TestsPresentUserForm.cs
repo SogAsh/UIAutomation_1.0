@@ -4,12 +4,13 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.UI;
 using NUnit.Framework;
+using FluentAssertions;
 
 namespace UIAutomation_1._0
 {
-    public class TestsPresent : BasicClass
+    public class TestsPresentUserForm : BasicClass
     {
-        public static By singIn = By.XPath("//div/a[@href='/login']");
+        public static By singIn = By.XPath("//a[@href='/login']");
         public static string usernameForm = "Username";
 
         [Test]

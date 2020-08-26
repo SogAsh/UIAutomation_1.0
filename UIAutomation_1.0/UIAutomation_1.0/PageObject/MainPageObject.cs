@@ -15,10 +15,12 @@ namespace UIAutomation_1._0
 
         #region Locators
         private readonly By enterpriseTab = By.XPath("//a[@class='HeaderMenu-link no-underline py-3 d-block d-lg-inline-block'][contains(text(),'Enterprise')]");
-        //public static By pricingTab = By.XPath("//summary[contains(text(),'Pricing')]");
         private readonly By mainIcon = By.CssSelector(".mr-4[href*='https://github.com/']");
         private readonly By insertValue = By.XPath("//input[@placeholder='Search GitHub']");
         private readonly By searchClick = By.XPath("//span[@class='js-jump-to-badge-search-text-global']");
+
+        public static By pricingTab = By.XPath("//summary[contains(text(),'Pricing')]");
+        public static By comparePlans = By.XPath("//a[text()='Compare plans']");
         #endregion
 
         public MainPageObject(IWebDriver driver)
@@ -42,8 +44,21 @@ namespace UIAutomation_1._0
         {
             _driver.FindElement(insertValue).SendKeys("RestSharp");
             BasicClass.WaitElement(_driver, searchClick);
-            
+
             _driver.FindElement(searchClick).Click();
+        }
+
+        public PricingPageObject GoToPricingPage() //переходим на страницу Pricing
+        {
+            _driver.FindElement(MainPageObject.pricingTab).Click(); //клик по вкладке Pricing
+            BasicClass.WaitElement(_driver, MainPageObject.pricingTab);
+
+            _driver.FindElement(MainPageObject.pricingTab).Click();
+            
+            BasicClass.WaitElement(_driver, MainPageObject.comparePlans);
+            _driver.FindElement(MainPageObject.comparePlans).Click(); //выбор Сompare plans
+
+            return new PricingPageObject(_driver);
         }
     }
 }

@@ -52,12 +52,12 @@ namespace UIAutomation_1._0
                 throw new WebDriverTimeoutException($"Cant find {location}", ex);
             }
 
-        } //метод ожидания страницы
+        }  //метод ожидания страницы
 
-        public static void WaitElement(IWebDriver driver, By locator, int seconds = 10)
+        public static void WaitElement(IWebDriver driver, By locator, int seconds = 10) //метод ожидания элемента для видимости и кликабельности
         {
             new WebDriverWait(driver, TimeSpan.FromSeconds(seconds)).Until(ExpectedConditions.ElementIsVisible(locator));
             new WebDriverWait(driver, TimeSpan.FromSeconds(seconds)).Until(ExpectedConditions.ElementToBeClickable(locator));
-        } //метод ожидания элемента
+        } 
     }
 }

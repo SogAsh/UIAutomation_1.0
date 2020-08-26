@@ -5,6 +5,7 @@ using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.UI;
 using NUnit.Framework;
 using UIAutomation_1._0;
+using FluentAssertions;
 
 namespace UIAutomation_1._1
 {

@@ -11,8 +11,8 @@ namespace UIAutomation_1._0.PageObject
         private IWebDriver _driver;
 
         public static By restSharpLink = By.LinkText("restsharp/RestSharp");
-        public static By countRepozitory = By.XPath("//h3[contains(text(),' repository results')]");
-        public static string countResults = 501 + " repository results";
+        public static By restSharpPage = By.CssSelector("a[href='/restsharp']");
+        public static By countRepozitory = By.XPath("//summary[@class='btn btn-sm select-menu-button']");
 
         public SearchResultPageObject(IWebDriver driver)
         {
